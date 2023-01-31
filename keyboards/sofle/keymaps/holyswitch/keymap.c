@@ -19,7 +19,6 @@
 // clang-format off
 
 #include QMK_KEYBOARD_H
-#include "oled.c"
 
 // Default keymap. This can be changed in Vial. Use oled.c to change beavior that Vial cannot change.
 
@@ -111,5 +110,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_LALT,  KC_LCTL,  KC_LSFT,  XXXXXXX, KC_CAPS,                       KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT,  KC_DEL, KC_BSPC,
   _______,KC_UNDO, KC_CUT, KC_COPY, KC_PASTE, XXXXXXX,  _______,       _______,  XXXXXXX, _______, XXXXXXX, _______,   XXXXXXX, _______,
                          _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
-)
+),
 };

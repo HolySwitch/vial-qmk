@@ -31,11 +31,26 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 150
 
+#define SPLIT_LAYER_STATE_ENABLE
+
+#undef DYNAMIC_KEYMAP_LAYER_COUNT
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
+
 #ifdef RGBLIGHT_ENABLE
     #define RGB_DI_PIN D3
+
     #undef RGBLED_NUM
-    #define RGBLED_NUM 72
-	#define RGBLED_SPLIT { RGBLED_NUM/2, RGBLED_NUM/2 }
+    #ifdef RGBLIGHT_MODE_UNDERGLOW
+    #   define RGBLED_NUM 7*2
+    #endif
+    #ifdef RGBLIGHT_MODE_BACKLIGHT
+    #   define RGBLED_NUM 29*2
+    #endif
+    #ifdef RGBLIGHT_MODE_FULL
+    #   define RGBLED_NUM 36*2
+    #endif
+
+    #define RGBLED_SPLIT { RGBLED_NUM/2, RGBLED_NUM/2 }
 
     #undef RGBLIGHT_ANIMATIONS
     #undef RGBLIGHT_EFFECT_BREATHING

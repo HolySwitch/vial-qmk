@@ -19,3 +19,7 @@ endif
 ifeq ($(strip $(ENCODER_ENABLE)), yes)
     VIAL_ENCODERS_ENABLE = yes
 endif
+
+ifeq ($(strip $(LOGO_ENABLE)), yes)
+    OPT_DEFS += -DLOGO_ENABLE
+endif
